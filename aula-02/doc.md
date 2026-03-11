@@ -1,16 +1,7 @@
-# Aula-02
+# Templates e Static Files
 
-## Criação de 3 páginas em flask de qualquer tema
+### Tópicos abordados
 
-### Tema - RPG
-
-#### Páginas
-
-- Home
-    - Explicação básica do App e do tema.
-- Bestiário
-    - Lista de criaturas que serão posteriormente cadastradas numa aba dee cadastro.
-- Localizações
-    - Lista das principais localizações no mundo de Viz.
-- Cadastro
-    - Página para fazer o cadastro de abas e itens do RPG.
+- Introdução a importação de css, imagens e arquivos estáticos.
+- Introdução a modelos e templates do site
+    - Header, Navbar, Footer, Hamburguer, Dropdown, etc..
