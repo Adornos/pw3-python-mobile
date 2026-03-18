@@ -1,9 +1,22 @@
 <!-- Importação do Template -->
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
+<main>
+  <h1>Jogos em destaque</h1>
+  <hr />
+  <p><a href="/">Voltar</a></p>
 
-    <h1>Jogos em destaque</h1>
-    <hr>
-    <p><a href="/">Voltar</a></p>
-    
+  <ul>
+    <li>Título: {{ titulo }}</li>
+    <li>Ano: {{ ano }}</li>
+    <li>Categoria: {{ categoria }}</li>
+    <!-- <li>Descrição: {{ descricao }}</li> -->
+  </ul>
+    <h2>Top Players Ranking:</h2>
+    <ol>
+    {% for jogador in jogadores %}
+    <li>{{ jogador }}</li>
+    {% endfor %}
+    </ol>
+</main>
+
 {% endblock content %}

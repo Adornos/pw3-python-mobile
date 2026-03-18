@@ -1,9 +1,18 @@
 <!-- Importação do Template -->
 {% extends 'base.html' %}
 {% block content %}
+<main>
 
     <h1>Consoles em destaque</h1>
+    <h2>{{consolesDestaques}}</h2>
     <hr>
     <p><a href="/">Voltar</a></p>
+
+    <ul>
+        {%for console in consoles%}
+        <li>{{jogador}}</li>
+        {%endfor%}
+    </ul>
+</main>
 
 {% endblock content %}
