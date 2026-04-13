@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <h2>Cadastrar Nova Criatura</h2>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Nome" required>
+        <input type="text" name="type" placeholder="Tipo" required>
+        <input type="number" name="level" placeholder="Nível" required>
+        <textarea name="description" placeholder="Descrição" required></textarea>
+        <button type="submit">Cadastrar</button>
+    </form>
+</section>
+
+<section class="cards">
+
+{% for c in creatures %}
+    <div class="card">
+        <h3>{{ c.nome }}</h3>
+        <p><strong>Tipo:</strong> {{ c.tipo }}</p>
+        <p><strong>Nível:</strong> {{ c.nivel }}</p>
+        <p>{{ c.descricao }}</p>
+    </div>
+{% endfor %}
+
+</section>
+
+{% endblock %}

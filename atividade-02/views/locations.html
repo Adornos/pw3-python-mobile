@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section>
+    <h2>Locais do Mundo RPG</h2>
+
+    <div class="cards">
+        {% for loc in locations %}
+            <div class="card">
+                <h3>{{ loc.nome }}</h3>
+                <p><strong>Região:</strong> {{ loc.regiao }}</p>
+                <p>{{ loc.descricao }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<section class="cards">
+
+    {% for c in creatures %}
+        <div class="card">
+            <h3>{{ c.nome }}</h3>
+            <p><strong>Tipo:</strong> {{ c.tipo }}</p>
+            <p><strong>Nível:</strong> {{ c.nivel }}</p>
+            <p>{{ c.descricao }}</p>
+        </div>
+    {% endfor %}
+
+</section>
+{% endblock content%}
