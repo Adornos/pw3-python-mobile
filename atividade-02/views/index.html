@@ -1,15 +1,26 @@
-<!-- Importação do Template -->
-{% extends 'base.html' %}
-{% block content %}
-<main>
+{% extends 'base.html' %} {% block content %}
+    <section>
+        <h2>Sobre o Sistema</h2>
+        <p>
+            Viz RPG é um sistema focado em narrativa, estratégia e liberdade criativa.
+            Viva aventuras épicas em um mundo cheio de mistérios.
+        </p>
 
-    <h1>Bem vindo ao The Games! Seu site favorito de jogos</h1>
-    <h3>Seu site favorito de jogos</h3>
-    <hr>
-    <!-- <p><a href="/games">Games</a></p>
-    <p><a href="/consoles">Consoles</a></p> -->
-    <hr>
-    <img src="{{url_for('static', filename='/imgs/games.webp')}}" alt="The Games" width="720px" style="margin-inline:auto; display:block;">
-</main>
+        <div class="cards">
+            <div class="card">
+                <h3>⚔️ Combate</h3>
+                <p>Sistema dinâmico com foco em estratégia.</p>
+            </div>
 
+            <div class="card">
+                <h3>🧙 Magia</h3>
+                <p>Magias versáteis com múltiplas possibilidades.</p>
+            </div>
+
+            <div class="card">
+                <h3>🛡️ Personalização</h3>
+                <p>Personagens únicos com talentos variados.</p>
+            </div>
+        </div>
+    </section>
 {% endblock content%}

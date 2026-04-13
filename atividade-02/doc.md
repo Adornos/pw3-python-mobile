@@ -1,7 +1,8 @@
-# Estrutura MVC
+# Atividade-02
 
-### Tópicos abordados
+### Tema - RPG
 
-- Models
-- Views
-- Controllers
+- Adição de css externo
+- estrutura mvc
+- html dinâmico
+
