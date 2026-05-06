@@ -1,0 +1,6 @@
+py -3.12 -m pip install flask
+py -3.12 -m pip install flask-sqlalchemy
+py -3.12 -m pip install pymysql  
+py -3.12 -m pip install mysqlclient    
+py -3.12  app.py 
+ 

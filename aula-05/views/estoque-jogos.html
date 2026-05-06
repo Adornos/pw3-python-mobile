@@ -1,0 +1,61 @@
+<!-- Importação do Template -->
+{% extends 'base.html' %}
+{% block content %}
+<main>
+
+    <details>
+        <summary>
+            <h1>Cadastrar um novo jogo</h1>
+        </summary>
+        <form action="{{url_for('estoque_jogos')}}" method="POST" class="container mt-4">
+
+            <div class="mb-3">
+                <label class="form-label">Título</label>
+                <input type="text" name="titulo" class="form-control" placeholder="Insira o nome do jogo" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Ano</label>
+                <input type="number" name="ano" class="form-control" placeholder="Insira o ano de lançamento" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Categoria</label>
+                <input type="text" name="categoria" class="form-control" placeholder="Insira a categoria do jogo"
+                    required>
+            </div>
+
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-success">Cadastrar</button>
+                <button type="reset" class="btn btn-secondary">Limpar</button>
+            </div>
+
+        </form>
+    </details>
+
+    <h2 class="mx-auto">Controle do estoque</h2>
+    <table class="table table-bordered table-hover">
+        <tr>
+            <th>Titulo</th>
+            <th>Ano</th>
+            <th>Categoraia</th>
+            <th>Plataforma</th>
+            <th>Preco</th>
+            <th>Quantidade</th>
+        </tr>
+        <tbody>
+            {% for game in games %}
+            <tr>
+                <td>{{game.titulo}}</td>
+                <td>{{game.ano}}</td>
+                <td>{{game.categoria}}</td>
+                <td>{{game.plataforma}}</td>
+                <td>{{game.preco}}</td>
+                <td>{{game.quantidade}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+
+{% endblock content %}
